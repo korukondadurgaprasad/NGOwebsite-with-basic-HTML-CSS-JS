@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate to Help Children</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<head>
+    <style>
+        /* Your CSS styles go here */
+        p {
+            font-size: 16px;
+            color: #3a02be;
+            padding: 10px;
+            margin: 40px;
+        }
+
+    </style>
+</head>  
+<a href=""></a>
+<head>
+    <style>
+        body {
+            background-color: #bd8aae; /* Replace with your desired color code */
+        }
+    </style>
+</head> 
+<body>
+    <header>
+        <h1>Donate to Help Children</h1>
+    </header>
+
+    <form action="/" method="POST" onsubmit="return showDonationDoneMessage();">
+        <h2>Make a Donation</h2>
+        <div>
+            <label for="name">Name:</label>
+        </div>
+        <input type="text" id="name" name="name" required>
+    
+        <div>
+            <label for="email">Email:</label>
+        </div>
+        <input type="email" id="email" name="email" required>
+    
+        <div>
+            <label for="amount">Donation Amount:</label>
+        </div>
+        <input type="number" id="amount" name="amount" min="1" required>
+    
+        <div>
+            <label for="message">Message (optional):</label>
+        </div>
+        <textarea id="message" name="message" rows="4"></textarea>
+    
+        <div>
+            <button type="submit">Donate Now</button>
+        </div>
+    </form>
+
+    <p id="donationDoneMessage" style="display: none; color: green;">Donation done!</p>
+
+    <script>
+        function showDonationDoneMessage() {
+            // Show the "Donation done" message
+            document.getElementById("donationDoneMessage").style.display = "block";
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+</html>

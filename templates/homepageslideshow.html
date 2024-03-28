@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>NGO Homepage Slideshow</title>
+    <style>
+        /* Style for the slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Style for the slideshow images */
+        .mySlides {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Style for navigation dots */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+       .slideshow-container{
+        width: 10000%;
+        height: 100%;
+        }
+       
+        /* Style for active dot */
+        .active {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+    <div class="mySlides">
+        <img src="https://as1.ftcdn.net/v2/jpg/01/02/97/70/1000_F_102977097_txjIOGhb5WzmnOVCrtsQXNQfkrW34pDn.jpg" alt="Image 1">
+    </div>
+    <div class="mySlides">
+        <img src="https://img.freepik.com/premium-photo/two-hands-helping-arm-friend-teamwork-rescue-helping-gesture-hands-close-up-help-hand-helping-hand-concept-support-helping-hand-outstretched-isolated-arm-salvation_293990-388.jpg" alt="Image 2">
+    </div>
+    <div class="mySlides">
+        <img src="https://img.freepik.com/free-vector/people-carrying-donation-charity-related-icons_53876-43091.jpg" alt="Image 3">
+    </div>
+
+    <!-- Add more images as needed -->
+
+    <div style="text-align: center;">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        </div>
+
+        <!-- Add more dots for additional images -->
+    </div>
+</div>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slideIndex++;
+        
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        
+        setTimeout(showSlides, 4000); // Change image every 4 seconds (adjust as needed)
+    }
+</script>
+
+</body>
+</html>
